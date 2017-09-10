@@ -1,0 +1,118 @@
+<!--Assessment1_part2.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        fieldset{
+            background:lightyellow;
+            border:10px solid yellow;
+            margin-bottom:10px;
+            width: 720px;
+        }
+        label{
+            width: 180px;
+            display: inline-block;
+            text-align: right;
+
+        }
+        label:hover{font-size: 40px}
+        .checkbox label{
+            width:auto;
+        }
+        .radio label{
+            width: auto;
+        }
+        .radio{
+            padding-left:115px;
+        }
+        span{
+            text-align: center;
+
+        }
+        .right{
+
+            width:40px;
+            background-color: purple;
+
+        }
+        .left{
+
+            width:40px;
+            background-color: darkred;
+
+        }
+
+        textarea{
+            width: 360px;
+            height: 50px;;
+        }
+    </style>
+</head>
+<body>
+<h1><b>Please Enter Your Details For Our Dating Website!</b></h1>
+<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php " method="post" enctype="multipart/form-data">
+    <fieldset>
+        <legend><h2>Your Face</h2></legend><br>
+        <label>Your image</label>
+        <input type="file" name="fileToUpload" required ><br><br>
+        <label>Image preview:</label><img id="preview">
+
+    </fieldset>
+
+
+    <fieldset>
+        <legend><h2>Your General Details</h2></legend><br>
+        <label for="name">Name:</label><input type="text" placeholder="Your full name" id="name" name="name" required><br>
+        <div class="radio">
+            <label>Gender:</label>
+
+            <input type="radio" name="sex" id="male" value="male" required><label for="male" >Male</label>
+            <input type="radio" name="sex" id="female" value="female" required><label for="female">Female</label><br>
+        </div>
+        <label>Age:</label>
+        <input type="number" value="18" name="age" required><br>
+        <label>Date of birth:</label>
+        <input type="date" name="date"><br>
+        <label>Favorite color:</label>
+        <input type="color" name="color"><br>
+        <label>Which country:</label>
+        <select>
+            <option value="no selection"></option>
+            <option value="china">China</option>
+            <option value="japan">Japan</option>
+            <option value="american">American</option>
+            <option value="france">France</option>
+            <option value="german">German</option>
+        </select>
+    </fieldset>
+
+
+    <fieldset>
+        <legend><h2>Youlr Indicators</h2></legend><br>
+        <label>Height:</label><span class="left">Short</span><input type="range" min="0" max="100"><span class="right">Tall</span><br>
+        <label>Salary:</label><span class="left">Poor</span><input type="range" min="0" max="100"><span class="right">Rich</span>
+
+    </fieldset>
+
+    <fieldset>
+        <legend><h2>Your Contact Information</h2></legend><br>
+        <label for="email" >Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="mobile">Mobile:</label>
+        <input type="tel"id="mobile" name="mobile" ><br>
+        <label for="address">Address:</label>
+        <textarea id="address" ></textarea><br>
+        <div class="checkbox">
+            <label>Method to contact you</label>
+
+            <input type="checkbox" name="contact" value="emailc" id="emalic"><label for="emalic">Email</label>
+            <input type="checkbox" name="contact" value="whatsapp" id="whatsapp"><label for="whatsapp">whatsapp</label>
+            <input type="checkbox" name="contact" value="IN-app chat" id="IN-app chat"><label for="IN-app chat">IN-app chat</label>
+        </div>
+    </fieldset>
+    <input type="submit">
+</form>
+</body>
+</html>
